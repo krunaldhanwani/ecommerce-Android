@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.ECommerceShopping">
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:installLocation="auto"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ECommerceShopping"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup"
+        tools:targetApi="31">
+        <activity
+            android:name="com.app.ecommerceshopping.ui.home.activity.FavouriteActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.ecommerceshopping.ui.home.activity.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.ecommerceshopping.ui.home.activity.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.ecommerceshopping.ui.login.activity.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.ecommerceshopping.ui.login.activity.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.ecommerceshopping.ui.login.activity.VerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.ecommerceshopping.ui.login.activity.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.ecommerceshopping.ui.login.activity.AuthenticationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.ecommerceshopping.ui.login.activity.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.ecommerceshopping.ui.login.activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.ecommerceshopping.MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

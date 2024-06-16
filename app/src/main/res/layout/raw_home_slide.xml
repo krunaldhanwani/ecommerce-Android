@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.app.ecommerceshopping.custom.widget.CustomIconView
+        android:id="@+id/ivSlide1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_285sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.app.ecommerceshopping.custom.widget.CustomTextViewBold
+        android:id="@+id/tvLoremIpsum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Lorem ipsum"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_17sdp"
+        android:layout_marginStart="@dimen/_33sdp"
+        android:layout_marginTop="@dimen/_80sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ivSlide1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.app.ecommerceshopping.custom.widget.CustomTextView
+        android:id="@+id/tvLoremDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/_33sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        tools:text="Lorem ipsum dolor sit amet consectetur. Feugiat tortor proin fames mi eu fermentum nec fringilla amet. Lectus."
+        app:layout_constraintTop_toBottomOf="@+id/tvLoremIpsum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

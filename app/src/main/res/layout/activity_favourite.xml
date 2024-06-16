@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSkinE4"
+    tools:context="com.app.ecommerceshopping.ui.home.activity.FavouriteActivity">
+
+    <include
+        android:id="@+id/includeFavourite"
+        layout="@layout/raw_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.app.ecommerceshopping.custom.widget.CustomIconView
+        android:id="@+id/ivBackFavourite"
+        android:layout_width="@dimen/_19sdp"
+        android:layout_height="@dimen/_19sdp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:background="@drawable/ic_back_white"
+        app:layout_constraintBottom_toBottomOf="@+id/includeFavourite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/includeFavourite" />
+
+    <com.app.ecommerceshopping.custom.widget.CustomIconView
+        android:id="@+id/ivSearch"
+        android:layout_width="@dimen/_19sdp"
+        android:layout_height="@dimen/_19sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/includeFavourite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/includeFavourite" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavouriteProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/_6sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includeFavourite"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

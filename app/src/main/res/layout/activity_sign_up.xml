@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSkinE4"
+    tools:context="com.app.ecommerceshopping.ui.login.activity.SignUpActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/raw_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="@dimen/_59sdp"
+                android:layout_height="@dimen/_59sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/ic_profile_picture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginEnd="@dimen/_28sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfileImage">
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvName"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.app.ecommerceshopping.custom.widget.CustomEditText
+                    android:id="@+id/etName"
+                    style="@style/text_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/bg_orange5e_border"
+                    android:hint="@string/enter_here"
+                    android:textColorHint="@color/colorGreyAE"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_28sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clName">
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvEmail"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email_address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.app.ecommerceshopping.custom.widget.CustomEditText
+                    android:id="@+id/etEmail"
+                    style="@style/text_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/bg_orange5e_border"
+                    android:hint="@string/enter_e_mail_here"
+                    android:textColorHint="@color/colorGreyAE"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_28sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clEmail">
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvMobileNumber"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile_no"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvMobileNumberCode"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/bg_orange5e_border"
+                    android:hint="@string/_91"
+                    android:textColorHint="@color/black"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMobileNumber" />
+                
+                <View
+                    android:id="@+id/dash"
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/colorGreyAE"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    app:layout_constraintStart_toEndOf="@+id/tvMobileNumberCode"
+                    app:layout_constraintTop_toTopOf="@+id/tvMobileNumberCode"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvMobileNumberCode"/>
+
+
+                <com.app.ecommerceshopping.custom.widget.CustomEditText
+                    android:id="@+id/etMobileNumber"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/bg_orange5e_border"
+                    android:hint="@string/_9685741233"
+                    android:textColorHint="@color/black"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    app:layout_constraintStart_toEndOf="@+id/dash"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMobileNumber" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_28sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clMobileNumber">
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvGender"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llMale"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGender"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <RadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:background="@drawable/custom_radio_button_"
+                        android:button="@android:color/transparent"
+                        android:clickable="false"
+                        android:checked="true"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <com.app.ecommerceshopping.custom.widget.CustomTextView
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/male"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        app:layout_constraintTop_toTopOf="@id/rbMale"
+                        app:layout_constraintBottom_toBottomOf="@id/rbMale"
+                        app:layout_constraintStart_toEndOf="@id/rbMale"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llFemale"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGender"
+                    app:layout_constraintStart_toEndOf="@+id/llMale">
+
+                    <RadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:background="@drawable/custom_radio_button_"
+                        android:button="@android:color/transparent"
+                        android:clickable="false"
+                        android:checked="false"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <com.app.ecommerceshopping.custom.widget.CustomTextView
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/female"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        app:layout_constraintTop_toTopOf="@id/rbFemale"
+                        app:layout_constraintBottom_toBottomOf="@id/rbFemale"
+                        app:layout_constraintStart_toEndOf="@id/rbFemale"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llOther"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGender"
+                    app:layout_constraintStart_toEndOf="@+id/llFemale">
+
+                    <RadioButton
+                        android:id="@+id/rbOther"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:background="@drawable/custom_radio_button_"
+                        android:button="@android:color/transparent"
+                        android:clickable="false"
+                        android:checked="false"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <com.app.ecommerceshopping.custom.widget.CustomTextView
+                        style="@style/text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/others"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        app:layout_constraintTop_toTopOf="@id/rbOther"
+                        app:layout_constraintBottom_toBottomOf="@id/rbOther"
+                        app:layout_constraintStart_toEndOf="@id/rbOther"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_28sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clGender">
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvPassword"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.app.ecommerceshopping.custom.widget.CustomEditText
+                    android:id="@+id/etPassword"
+                    style="@style/text_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/bg_orange5e_border"
+                    android:textColorHint="@color/colorGreyAE"
+                    android:hint="@string/pass"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
+
+                <com.app.ecommerceshopping.custom.widget.CustomIconView
+                    android:id="@+id/ivPass"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:src="@drawable/ic_pass_show"
+                    app:layout_constraintBottom_toBottomOf="@+id/etPassword"
+                    app:layout_constraintEnd_toEndOf="@+id/etPassword"
+                    app:layout_constraintTop_toTopOf="@+id/etPassword" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_28sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clPassword">
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvConfirmPassword"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/confirm_password"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.app.ecommerceshopping.custom.widget.CustomEditText
+                    android:id="@+id/etConfirmPassword"
+                    style="@style/text_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/bg_orange5e_border"
+                    android:textColorHint="@color/colorGreyAE"
+                    android:hint="@string/pass"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvConfirmPassword" />
+
+                <com.app.ecommerceshopping.custom.widget.CustomIconView
+                    android:id="@+id/ivConfirmPass"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:src="@drawable/ic_pass_show"
+                    app:layout_constraintBottom_toBottomOf="@+id/etConfirmPassword"
+                    app:layout_constraintEnd_toEndOf="@+id/etConfirmPassword"
+                    app:layout_constraintTop_toTopOf="@+id/etConfirmPassword" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clBirthdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_28sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clConfirmPassword">
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvBirthdate"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/birthdate_optional"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvDD"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/bg_orange5e_border"
+                    android:hint="@string/dd"
+                    android:textColorHint="@color/colorGreyAE"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBirthdate" />
+
+                <View
+                    android:id="@+id/dashDD"
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/colorGreyAE"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    app:layout_constraintStart_toEndOf="@+id/tvDD"
+                    app:layout_constraintTop_toTopOf="@+id/tvDD"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvDD"/>
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvMM"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/bg_orange5e_border"
+                    android:hint="@string/mm"
+                    android:textColorHint="@color/colorGreyAE"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintStart_toEndOf="@+id/dashDD"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBirthdate" />
+
+                <View
+                    android:id="@+id/dashMM"
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/colorGreyAE"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    app:layout_constraintStart_toEndOf="@+id/tvMM"
+                    app:layout_constraintTop_toTopOf="@+id/tvMM"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvMM"/>
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvYYYY"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/bg_orange5e_border"
+                    android:hint="@string/yyyy"
+                    android:textColorHint="@color/colorGreyAE"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintStart_toEndOf="@+id/dashMM"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBirthdate" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clConformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_28sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clBirthdate">
+
+                <CheckBox
+                    android:id="@+id/cbConfirmCheck"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:background="@drawable/custom_check_box"
+                    android:button="@android:color/transparent"
+                    android:clickable="false"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.app.ecommerceshopping.custom.widget.CustomTextView
+                    android:id="@+id/tvConformation"
+                    style="@style/text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_confirm_that_i_have_read_and_agree_to_the_terms_of_service_policies"
+                    app:layout_constraintStart_toEndOf="@+id/cbConfirmCheck"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.app.ecommerceshopping.custom.widget.CustomTextViewBold
+                android:id="@+id/tvSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_orange5e"
+                android:paddingStart="@dimen/_31sdp"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingEnd="@dimen/_31sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:text="@string/log_in"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_18sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clConformation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

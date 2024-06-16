@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_6sdp"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:layout_marginBottom="@dimen/_6sdp"
+    android:layout_marginEnd="@dimen/_6sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/big_product"
+        android:paddingBottom="@dimen/_2sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingTop="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="@dimen/_118sdp"
+            android:layout_height="@dimen/_118sdp"
+            android:src="@drawable/dummy_product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.app.ecommerceshopping.custom.widget.CustomIconView
+            android:id="@+id/icDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_discount"
+            app:layout_constraintStart_toStartOf="@id/icDiscount"
+            app:layout_constraintTop_toTopOf="@id/icDiscount" />
+
+        <com.app.ecommerceshopping.custom.widget.CustomTextView
+            style="@style/text_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_4sdp"
+            android:rotation="-52"
+            android:text="Clothing"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/icDiscount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.app.ecommerceshopping.custom.widget.CustomTextViewSemiBold
+            android:id="@+id/tvProductDetails"
+            style="@style/text_12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:text="FS - Nike Air Max 270 React..."
+            android:textColor="@color/colorOrange53"
+            app:layout_constraintEnd_toEndOf="@+id/ivProduct"
+            app:layout_constraintStart_toStartOf="@+id/ivProduct"
+            app:layout_constraintTop_toBottomOf="@+id/ivProduct" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="4"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductDetails" />
+
+        <com.app.ecommerceshopping.custom.widget.CustomTextViewBold
+            android:id="@+id/tvRating"
+            style="@style/text_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+            app:layout_constraintStart_toEndOf="@+id/ratingBar"
+            app:layout_constraintTop_toTopOf="@+id/ratingBar" />
+
+        <com.app.ecommerceshopping.custom.widget.CustomTextView
+            android:id="@+id/tvRatingOf"
+            style="@style/text_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:text="(5)"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+            app:layout_constraintStart_toEndOf="@+id/tvRating"
+            app:layout_constraintTop_toTopOf="@+id/ratingBar" />
+
+        <com.app.ecommerceshopping.custom.widget.CustomTextViewSemiBold
+            android:id="@+id/tvPrice"
+            style="@style/text_12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_4sdp"
+            android:text="$299.12"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
